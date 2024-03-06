@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --primary-color:#232830;
+    --primary-text-color:#FFFFFF;
+    --secondary-text-color: #FF7575;
+    --nav-text-color: #909090;
+;
+    ;
+}
+.container 
+{
+    width: 85% !important;
+    margin: auto !important;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    font-family: "Recursive", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-variation-settings:
+      "slnt" 0,
+      "CASL" 0,
+      "CRSV" 0.5,
+      "MONO" 0;
+}
+
+body
+{
+    min-height: 100vh;
+    background: var(--primary-color);
+    /* font-size: 24px; */
+}
+/* End header */
+header 
+{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    color: var(--primary-text-color);
+}
+
+header .header-r-s ul 
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:25px;
+}
+
+header .header-r-s ul li a 
+{
+    text-decoration: none;
+    color: var(--primary-text-color);
+    
+}
+/* End header */
+/* Start  brand section  */
+#brand-info 
+{
+    padding: 50px;
+}
+
+#brand-info  .logo-container
+{
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#brand-info .logo-text .special-logo-tex
+{
+    text-align: center;
+    color: var(--secondary-text-color);
+    font-size: 71px;
+    /* font-weight: 800; */
+}
+
+#brand-info .logo-text .secondary-logo-tex
+{
+    color: var(--primary-text-color);
+    font-size: 25px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 945px) 
+{
+    #brand-info .logo-text .special-logo-tex
+    {
+        
+        font-size: 40px;
+    }
+
+    #brand-info .logo-text .secondary-logo-tex
+    {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 720px) 
+{
+    #brand-info .logo-text .special-logo-tex
+    {
+
+        font-size: 51px;
+    }
+
+    #brand-info .logo-text .secondary-logo-tex
+    {
+        font-size: 20px;
+    }
+}
+/* End  brand section  */
+
+/* Start nav */
+nav
+{
+    margin-top: 40px;
+    border-top: 1px solid #4D4D4D;
+    padding: 12px 0;
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    gap: 27px;
+    justify-content: center;
+    width: 100%;
+    /* width: fit-content !important; */
+    /* margin: auto; */
+}
+nav ul li
+{
+    cursor: pointer;
+    position: relative;
+}
+nav ul li a
+{
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li .vector
+{
+   height: 16px; 
+   margin-right:8px ;
+}
+nav ul li:last-child::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid #fff; */
+    background-image: linear-gradient( to right ,transparent 50%,var(--primary-color));
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+/* Etart nav */
+/* Start Articles section */
+
+#articles-s
+{
+    padding: 80px 0;
+}
+
+#articles-s .articles 
+{
+    display:  flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    transition: all 0.4s ease-in-out;
+}
+
+
+#articles-s .articles .card
+{
+    flex-direction: column;
+    justify-content: space-between;
+    
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+    padding: 18px 12px;
+    background: #ffffff;
+    /* height: 900px; */
+}
+
+#articles-s .articles.column-list  .card
+{
+    width: 100%;
+}
+
+#articles-s .articles.grid-list  .card
+{
+    width:calc( (100vw - 20% - (30px * 2) ) / 3);
+    max-width: 300px;
+    min-width: 250px;
+}
+
+#articles-s .articles .card-image
+{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+#articles-s .articles  .card-image img
+{
+    width: 100%;
+}
+
+#articles-s .articles  .card-title
+{
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+#articles-s .articles  .card-text
+{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#articles-s .articles  .card-info
+{
+    font-size: 14px;
+    display: flex;
+    /* justify-content: center; */
+    gap: 20px;
+    position: relative;
+    top: 8px;
+    left: 1px;
+}
+
+.sperator::after
+{
+    content: ".";
+    font-size: 18px;
+    position: relative;
+    bottom: 8px;
+    
+}
+
+/* Start Articles section */
+
+/* Start Pagination */
+
+.pagination 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.pagination ul 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.pagination ul li 
+{
+    width: fit-content;
+    padding: 10px;
+    min-width: 28px;
+    text-align: center;
+    color: var(--nav-text-color);
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.pagination ul li.active ,
+.pagination ul li:hover
+{
+    border-top: 2px solid var(--secondary-text-color);
+    color: var(--secondary-text-color);
+}
+
+
+/* End Pagination */
+
+/* Start footer  */
+footer
+{
+    
+    margin-top: 40px;
+    border-top: 1px solid #4D4D4D;
+    padding: 20px 0;
+    padding-bottom: 60px;
+}
+
+footer .content 
+{
+    display: flex;
+    justify-content: space-between;
+    color:var(--primary-text-color);
+    position: relative;
+}
+
+footer .content .footer-link
+{
+    padding: 5px 6px;
+    background: #4699E0;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 0 16px;
+    bottom: 1px;
+}
+
+/* End footer  */

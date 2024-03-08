@@ -1,2 +1,2 @@
-# static_template_dev_cofy
+# static_template
 Simple Html css js template 
